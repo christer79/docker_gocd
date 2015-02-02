@@ -20,4 +20,7 @@ ADD go-server-14.4.0-1356.noarch.rpm /root/
 
 RUN yum -y install /root/go-*.rpm
 
+RUN mkdir /usr/share/go-agent/config
+ADD autoregister.properties /usr/share/go-agent/config/
+ADD cruise-config.xml /etc/go/	
 #ADD go-agent /etc/default/
